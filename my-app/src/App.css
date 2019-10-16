@@ -30,4 +30,15 @@
 }
 .one:last-child{
   background-color: blue;
+  animation: example .5s linear 0s infinite alternate;
+}
+@-webkit-keyframes example {
+  from {position: relative;bottom: 10px;}
+  to {position: relative;top: 10px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {position: relative;bottom: 10px;}
+  to {position: relative;top: 10px;}
 }
