@@ -23,12 +23,12 @@ class App extends React.Component {
   }
   Tick() {
     this.setState({ 
-                    Now : new Date(),
-                    Hours : new Date().getHours(),
-                    Minutes : new Date().getMinutes(),
-                    Seconds : new Date().getSeconds(),
-                    TabHours : this.getTable(new Date().getHours()),
-                    TabMinutes : this.getTable(new Date().getMinutes()),
+                    Now         : new Date(),
+                    Hours       : new Date().getHours(),
+                    Minutes     : new Date().getMinutes(),
+                    Seconds     : new Date().getSeconds(),
+                    TabHours    : this.getTable(new Date().getHours()),
+                    TabMinutes  : this.getTable(new Date().getMinutes()),
                     TabSecondes : this.getTable(new Date().getSeconds())
                   });
   }
