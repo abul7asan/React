@@ -3,20 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
+    this.state = { Now : new Date() }
   }
-  componentDidMount(){
-
+  componentDidMount() {
+    this.Timer = setInterval( () => this.Tick() , 1000);
   }
-  componentWillUnmount(){
-
+  componentWillUnmount() {
+    clearInterval(this.Timer);
+  }
+  Tick() {
+    this.setState({ Now : new Date() });
   }
   render(){
     return (
       <div className="App">
       <header className="App-header">
-        <h1>OK</h1>
+        <h1>{ this.state.Now.toLocaleString() }</h1>
       </header>
     </div>
     )
